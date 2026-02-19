@@ -1,11 +1,11 @@
 # Overview
 
-It is public template of assignment `"labrabota 3"` for FPMI students
+It is public repository of my assignment `"labrabota 3"` for TPMP discipline.
 
 # Usage
 
-Please, edit README and add some details, as instance **{add your last name, first name and group number}**.
+Please, edit README and add some details, as instance **Shulga Maria 11a**.
 
 # Building
 
-Please, import repository and use for repl.it project, which is defined in the assignment "labrabota 3".
+This repository is created from template.
