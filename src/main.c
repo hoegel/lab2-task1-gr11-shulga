@@ -13,9 +13,35 @@ wchar_t *GetWC(const char *c);
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         printf("error: invalid arguments\nusage: <string1> <string2>\n");
-        return 0;
+        return 1;
     }
 
+  setlocale(LC_ALL, "");
+
+  wchar_t *ws1 = GetWC(argv[1]);
+  wchar_t *ws2 = GetWC(argv[2]);
+
+  if (ws1 == NULL || ws2 == NULL) {
+      printf("error converting string to wchar\n");
+      free(ws1);
+      free(ws2);
+      return 1;
+  }
+
+  printf("first string: %s\n", argv[1]);
+  printf("second string: %s\n", argv[2]);
+
+  int first = count_n(ws1);
+  int second = count_n(ws2);
+
+  printf("number of 'н' in first string: %d\n", first);
+  printf("number of 'н' in second string: %d\n", second);
+  printf("number of 'н' in both strings: %d\n", first + second);
+
+  free(ws1);
+  free(ws2);
+
+  
     return 0;
 }
 
