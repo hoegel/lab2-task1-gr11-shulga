@@ -1,5 +1,6 @@
-/* hello.c */
 /* Author: hoegel */
+
+/* main.c */
 #include <stdio.h>
 #include <wchar.h>
 #include <locale.h>
