@@ -28,15 +28,19 @@ int main(int argc, char *argv[]) {
       return 1;
   }
 
+  printf("\n### INPUT DATA ###\n");
   printf("first string: %s\n", argv[1]);
   printf("second string: %s\n", argv[2]);
 
   int first = count_n(ws1);
   int second = count_n(ws2);
 
+  printf("\n### OUTPUT ###\n");
+  printf("number of 'н' in both strings: %d\n", first + second);
+
+  printf("\n### EXTRA OUTPUT ###\n");
   printf("number of 'н' in first string: %d\n", first);
   printf("number of 'н' in second string: %d\n", second);
-  printf("number of 'н' in both strings: %d\n", first + second);
 
   free(ws1);
   free(ws2);
