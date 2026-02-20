@@ -4,21 +4,17 @@
 #include <stdio.h>
 #include <wchar.h>
 #include <locale.h>
+#include "count_n.h"
 
-int count_n(const wchar_t *s);
-
-void main (void)
+int main (int argc, char *argv[])
 {
-  //setlocale(LC_ALL, "");
-  const wchar_t *str = L"привеннн, мир";
-  printf("%d\n", count_n(str));
-}
+  if(argc != 3) {
+    printf("error: invalid arguments\nusage: <string1> <string2>\n");
+    return 0;
+  }
 
-int count_n(const wchar_t *s) {
-    int cnt = 0;
-    while (*s) {
-        if (*s == L'н') ++cnt;
-        ++s;
-    }
-    return cnt;
+  printf("first string: %s\n", argv[1]);
+  printf("second string: %s\n", argv[2]);
+  
+  return 0; 
 }
